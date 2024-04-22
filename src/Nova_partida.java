@@ -1,0 +1,2 @@
+class Nova_partida {
+}
