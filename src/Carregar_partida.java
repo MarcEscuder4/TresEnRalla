@@ -1,2 +1,0 @@
-class Carregar_partida {
-}

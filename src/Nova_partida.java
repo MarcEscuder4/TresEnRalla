@@ -1,2 +1,0 @@
-class Nova_partida {
-}
