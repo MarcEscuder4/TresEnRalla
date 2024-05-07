@@ -66,6 +66,7 @@ public class Joc {
 
     public void novaPartida() {
 // aqui se resetea tanto el tablero como el turno
+        torn = 1;
     }
 
 
