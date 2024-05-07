@@ -5,6 +5,16 @@ import javax.swing.JOptionPane;
 
 
 public class Joc {
+    char[][] taulell;
+    int torn;
+
+    public int getTorn() {
+        return torn;
+    }
+
+    public char[][] getTaulell() {
+        return taulell;
+    }
 
     public void carga(int segons) {
         try {
@@ -61,8 +71,8 @@ public class Joc {
     }
 
 
-    public static void novaPartida() {
-        TUI.taulell();
+    public void novaPartida() {
+// aqui se resetea tanto el tablero como el turno
     }
 
 
@@ -77,13 +87,13 @@ public class Joc {
 
 
         // TAULELL AMB POSICIONS
-        System.out.println("    A   B   C  " );
+        System.out.println("    A   B   C  ");
         System.out.println("  ╔═══╦═══╦═══╗");
-        System.out.println("1 ║ "+pt[0][0]+" ║ "+pt[0][1]+" ║ "+pt[0][2]+" ║");
+        System.out.println("1 ║ " + pt[0][0] + " ║ " + pt[0][1] + " ║ " + pt[0][2] + " ║");
         System.out.println("  ╠═══╬═══╬═══╣");
-        System.out.println("2 ║ "+pt[1][0]+" ║ "+pt[1][1]+" ║ "+pt[1][2]+" ║");
+        System.out.println("2 ║ " + pt[1][0] + " ║ " + pt[1][1] + " ║ " + pt[1][2] + " ║");
         System.out.println("  ╠═══╬═══╬═══╣");
-        System.out.println("3 ║ "+pt[2][0]+" ║ "+pt[2][1]+" ║ "+pt[2][2]+" ║");
+        System.out.println("3 ║ " + pt[2][0] + " ║ " + pt[2][1] + " ║ " + pt[2][2] + " ║");
         System.out.println("  ╚═══╩═══╩═══╝");
 
         /*
