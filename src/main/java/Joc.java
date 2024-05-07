@@ -128,9 +128,12 @@ public class Joc {
 
     }
 
+    /*
     public void jugadaGuanyadora() {
         TUI.taulell();
     }
+
+     */
 
     //  ----------------------------
     // CONFIGURACIÓ DE MIDA DE TAULELL

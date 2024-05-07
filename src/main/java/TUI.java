@@ -69,7 +69,7 @@ public class TUI {
     }
 
     // TAULELL DE JOC FENT ÚS DE ASCII CODE EXTENDED
-    public static void taulell() {
+    public void taulell() {
         System.out.println("    A   B   C  ");
         System.out.println("  ╔═══╦═══╦═══╗");
         System.out.println("1 ║   ║   ║   ║");
