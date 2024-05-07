@@ -22,6 +22,13 @@ public class JocTest {
         Assertions.assertEquals(torn, 0);
     }
 
+    void taulell_clean() {
+        Joc joc =  new Joc();
+        joc.novaPartida();
+
+
+    }
+
 
 
 }
