@@ -16,13 +16,6 @@ public class Joc {
         return taulell;
     }
 
-    public void carga(int segons) {
-        try {
-            Thread.sleep(segons * 1000);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
-    }
 
     public void joc() {
         Scanner sc = new Scanner(System.in);
@@ -158,5 +151,12 @@ public class Joc {
 
     //  ----------------------------
 
+    public void carga(int segons) {
+        try {
+            Thread.sleep(segons * 1000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
 
 }
