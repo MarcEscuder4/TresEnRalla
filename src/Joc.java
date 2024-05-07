@@ -5,9 +5,19 @@ import javax.swing.JOptionPane;
 
 
 public class Joc {
-    public void joc(String[] args) {
+
+    public void carga(int segons) {
+        try {
+            Thread.sleep(segons * 1000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+
+    public void joc() {
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.ENGLISH);
+
 
         // MOSTRA EN UN POPUP L'OBJECTIU / REGLES DEL JOC
         JOptionPane.showMessageDialog(null, "Per torns, s'ha d'aconseguir posar el teu símbol\ntres cops seguits en una línia recte o diagonal.\nEl que primer ho aconsegueixi guanya. ", "REGLES: TRES EN RATLLA", 1, null);
@@ -111,6 +121,29 @@ public class Joc {
     public void jugadaGuanyadora() {
         TUI.taulell();
     }
+
+    //  ----------------------------
+    // CONFIGURACIÓ DE MIDA DE TAULELL
+
+    public void midapartida() {
+        Scanner sc = new Scanner(System.in);
+        sc.useLocale(Locale.ENGLISH);
+
+        System.out.println("Amb quina mida de taulell vols jugar? ( min. 3 - max. 10 )");
+
+        int xpx = sc.nextInt();
+
+        String[][] posicions = new String[xpx][xpx];
+
+        for (int i = 0; i < xpx; i++) {
+            for (int j = 0; j < xpx; j++) {
+                posicions[i][j] = "";
+            }
+        }
+    }
+    // Array per allargar el taulell de joc
+
+    //  ----------------------------
 
 
 }

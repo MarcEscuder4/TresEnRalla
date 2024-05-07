@@ -6,28 +6,21 @@ import javax.swing.JOptionPane;
 public class TUI {
 
     Joc joc = new Joc();
+    Scanner sc = new Scanner(System.in);
 
-    public void inici() {
+
+    public void inici1() {
         // INTRODUCCIÓ AL JOC
-        System.out.println();
-        System.out.println("Iniciant: 'TRES EN RATLLA'");
-        System.out.println();
-
-
-        // MÉTODE QUE FA VEURE QUE ESTÀ CARREGANT EL JOC 2 segons
-        TUI.carga(2);
-        // Thread.sleep(2000);
-
-
-        // MOSTRAR TEXT DE CARREGANT MENÚ
-        System.out.println("Carregant Menú...");
-        System.out.println();
-
-
-        // MÉTODE QUE FA VEURE QUE ESTÀ CARREGANT EL JOC 2 segons
-        TUI.carga(4);
-        // Thread.sleep(2000);
+        System.out.println("\nIniciant: 'TRES EN RATLLA'\n ");
     }
+
+
+
+    public void inici2() {
+        // MOSTRAR TEXT DE CARREGANT MENÚ
+        System.out.println("Carregant Menú...\n");
+    }
+
 
     // MENU
     public int menu() {
@@ -42,11 +35,7 @@ public class TUI {
             System.out.println("Obrint: 'CONFIGURACIÓ'");
         } else {
             System.out.println("Sortint del 'TRES EN RATLLA'");
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+            joc.carga(2);
         }
 
         return menu;
@@ -66,19 +55,22 @@ public class TUI {
         joc.jugar();
 
     }
+
     public void carregar_partida() {
         System.out.println("Sóc carregar_partida");
     }
+
     public void configuracio() {
         System.out.println("Sóc la config");
     }
+
     public void sortir() {
         return;
     }
 
     // TAULELL DE JOC FENT ÚS DE ASCII CODE EXTENDED
     public static void taulell() {
-        System.out.println("    A   B   C  " );
+        System.out.println("    A   B   C  ");
         System.out.println("  ╔═══╦═══╦═══╗");
         System.out.println("1 ║   ║   ║   ║");
         System.out.println("  ╠═══╬═══╬═══╣");
@@ -98,32 +90,23 @@ public class TUI {
         // ARRAY PER LES POSICIONS DEL JOC
         // ARRAY[i][j] = ARRAY[fila][columna]
         String[][] pt = {
-                {"", "", ""},
-                {"", "", ""},
-                {"", "", ""}
+                {" ", " ", " "},
+                {" ", " ", " "},
+                {" ", " ", " "}
         };
 
 
         // TAULELL AMB POSICIONS
-        System.out.println("    A   B   C  " );
+        System.out.println("    A   B   C  ");
         System.out.println("  ╔═══╦═══╦═══╗");
-        System.out.println("1 ║ "+pt[0][0]+"  ║ "+pt[0][1]+"  ║ "+pt[0][2]+"  ║");
+        System.out.println("1 ║ " + pt[0][0] + "  ║ " + pt[0][1] + "  ║ " + pt[0][2] + "  ║");
         System.out.println("  ╠═══╬═══╬═══╣");
-        System.out.println("2 ║  "+pt[1][0]+" ║  "+pt[1][1]+" ║  "+pt[1][2]+" ║");
+        System.out.println("2 ║  " + pt[1][0] + " ║  " + pt[1][1] + " ║  " + pt[1][2] + " ║");
         System.out.println("  ╠═══╬═══╬═══╣");
-        System.out.println("3 ║ "+pt[2][0]+"  ║ "+pt[2][1]+"  ║ "+pt[2][2]+"  ║");
+        System.out.println("3 ║ " + pt[2][0] + "  ║ " + pt[2][1] + "  ║ " + pt[2][2] + "  ║");
         System.out.println("  ╚═══╩═══╩═══╝");
     }
 
-
-    public static void carga(int segons) {
-        try {
-            Thread.sleep(segons * 1000);
-        }
-        catch (InterruptedException e) {
-            Thread.currentThread().interrupt();;
-        }
-    }
 
 
     public void fiDePartida() {
@@ -165,7 +148,8 @@ public class TUI {
                 Thread.sleep(1000);
                 // QUAN SIGUI VÀLID EL NOM MOSTRAR AIXÓ:
                 JOptionPane.showMessageDialog(null, "Jugador1 ara és: " + jugador1 + ".", "TRES EN RATLLA", 1);
-            } else {}
+            } else {
+            }
 
             // —>
 
@@ -191,14 +175,14 @@ public class TUI {
             // MIRAR LA LONGITUD DE fj1 NOMÉS POT SER 1 DE LENGTH
             // MOSTRAR LA ELECCIÓ DEL jugador1
 
-            JOptionPane.showMessageDialog(null, jugador1 + " has seleccionat jugar amb '" + fj1 + "'","TRES EN RATLLA", 1);
+            JOptionPane.showMessageDialog(null, jugador1 + " has seleccionat jugar amb '" + fj1 + "'", "TRES EN RATLLA", 1);
 
             fj2 = JOptionPane.showInputDialog("Amb quina fitxa vols jugar " + jugador2 + "?");
             // FER COMPARACIÓ DEL RESULTAT INTRODUIT QUE NO SIGUI EL MATEIX QUE EL DE fj2
             // MIRAR LA LONGITUD DE fj1 NOMÉS POT SER 1 DE LENGTH
             // MOSTRAR LA ELECCIÓ DEL jugador1
 
-            JOptionPane.showMessageDialog(null, jugador2 + " has seleccionat jugar amb '" + fj2 + "'","TRES EN RATLLA", 1);
+            JOptionPane.showMessageDialog(null, jugador2 + " has seleccionat jugar amb '" + fj2 + "'", "TRES EN RATLLA", 1);
 
         } else {
 
@@ -230,34 +214,35 @@ public class TUI {
     }
 
     public void partida_win() {
-    // PARTIDA
-    int ronda = 0;
-    boolean win = false;
+        // PARTIDA
+        int ronda = 0;
+        boolean win = false;
 
         while (win = false) {
-        // mentre no es guanyi
-        //
-        if (ronda %2 == 0) {
-            // ronda par jugadorx
-            // VALOR INTRODUIT .toUpperCase comparació
-            ronda ++;
-        } else {
-            // ronda impar jugadory
-            ronda ++;
+            // mentre no es guanyi
+            //
+            if (ronda % 2 == 0) {
+                // ronda par jugadorx
+                // VALOR INTRODUIT .toUpperCase comparació
+                ronda++;
+            } else {
+                // ronda impar jugadory
+                ronda++;
+            }
+
+            ronda++;
         }
 
-        ronda ++;
-    }
+        String jugada1 = "";
+        String jugada2 = "";
 
-    String jugada1 = "";
-    String jugada2 = "";
+        String[][] posicions = {
+                {"", "", ""},
+                {"", "", ""},
+                {"", "", ""}
+        };
 
-    String[][] posicions = {
-            {"", "", ""},
-            {"", "", ""},
-            {"", "", ""}
-    };
-
+    /*
     // CANVI DE ENTRADA A FITXA
         if (1A || A1) {
 
@@ -299,6 +284,8 @@ public class TUI {
 
 }
 
+     */
+
 
 /*
     public static void jugadaGuanyadora () {
@@ -330,3 +317,5 @@ public class TUI {
     }
 
  */
+    }
+}
