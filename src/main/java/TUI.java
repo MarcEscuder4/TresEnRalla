@@ -3,7 +3,9 @@ import javax.swing.JOptionPane;
 
 public class TUI {
 
-    Joc joc = new Joc();
+
+    Main main = new Main();
+
     Scanner sc = new Scanner(System.in);
 
 
@@ -11,7 +13,6 @@ public class TUI {
         // INTRODUCCIÓ AL JOC
         System.out.println("\nIniciant: 'TRES EN RATLLA'\n ");
     }
-
 
 
     public void inici2() {
@@ -33,15 +34,20 @@ public class TUI {
             System.out.println("Obrint: 'CONFIGURACIÓ'");
         } else {
             System.out.println("Sortint del 'TRES EN RATLLA'");
-            joc.carga(2);
+            Carga.carga(2);
         }
 
         return menu;
     }
 
     public void nova_partida() {
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
 
-        joc.carga(2);
+        Carga.carga(2);
+
+        System.out.println("TRES EN RATLLA: NOVA PARTIDA");
 
         System.out.println(" \n \n \n \n \n \n ");
 
@@ -51,15 +57,60 @@ public class TUI {
     }
 
     public void carregar_partida() {
-        System.out.println("Sóc carregar_partida");
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+
+        Carga.carga(2);
+
+        System.out.println("TRES EN RATLLA: CONFIGURACIÓ");
+
     }
 
-    public void configuracio() {
-        System.out.println("Sóc la config");
+    public void configuracioTUI() {
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+
+        Carga.carga(2);
+
+        System.out.println("TRES EN RATLLA: CONFIGURACIÓ\n\n\n\n\n\n\n\n");
+
+        Carga.carga(1);
+
     }
+
+    public int confi() {
+        String[] o_confi = {"CANVIAR NOM", "CANVIAR FITXA", "CANVIAR TAULELL", "CANVIAR MIDES DE JOC", "ENRERE", "SORTIR"};
+        var confi = JOptionPane.showOptionDialog(null, "                                                                                                         CONFIGURACIÓ",
+                "TRES EN RATLLA", 0, 3, null, o_confi, o_confi[5]);
+        if (confi == 0) {
+            System.out.println("Carregant: 'CANVI DE NOM'...");
+        } else if (confi == 1) {
+            System.out.println("Carregant: 'CANVI DE FITXA'...");
+        } else if (confi == 2) {
+            System.out.println("Carregant: 'CANVIAR TAULELL'...");
+        } else if (confi == 3) {
+            System.out.println("Carregant: 'CANVIAR MIDES DE JOC'...");
+        } else if (confi == 4) {
+            System.out.println("TORNANT AL MENÚ...");
+        } else {
+            System.out.println("TANCANT 'TRES EN RATLLA'...");
+            Carga.carga(2);
+        }
+
+        return confi;
+    }
+
+
 
     public void sortir() {
-        return;
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+        System.out.println("TANCANT 'TRES EN RATLLA'...");
     }
+
+
 
 }

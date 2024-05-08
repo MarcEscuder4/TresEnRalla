@@ -19,6 +19,41 @@ public class Joc {
         return taulell;
     }
 
+    // REINICI DE TAULELL I TORN
+    public void novaPartida() {
+        torn = 1;
+    }
+
+    public void carregar_partida() {
+
+    }
+
+    public void configuracio_cn() {
+        System.out.println("Sóc la config");
+    }
+
+    public void configuracio_cf() {
+        System.out.println("Sóc la config");
+    }
+
+    public void configuracio_ct() {
+        System.out.println("Sóc la config");
+    }
+
+    public void configuracio_mj() {
+        System.out.println("Sóc la config");
+    }
+
+    public void configuracio_back() {
+        System.out.println("Sóc la config");
+    }
+
+
+    public void sortir() {
+        return;
+    }
+
+
 
     public void carga(int segons) {
         try {
