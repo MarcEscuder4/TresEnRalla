@@ -213,4 +213,51 @@ public class TUI_ordre {
  */
     }
 
+    /*
+    // MENU
+    public int menu() {
+        String[] o_menu = {"Nova Partida", "Carregar Partida", "Configuració", "Sortir"};
+        var menu = JOptionPane.showOptionDialog(null, "                                                    MENÚ",
+                "TRES EN RATLLA", 0, 3, null, o_menu, o_menu[0]);
+        if (menu == 0) {
+            System.out.println("Iniciant: 'NOVA PARTIDA'...");
+        } else if (menu == 1) {
+            System.out.println("Preparant: 'CARREGAR PARTIDA'");
+        } else if (menu == 2) {
+            System.out.println("Obrint: 'CONFIGURACIÓ'");
+            config();
+        } else {
+            System.out.println("Sortint del 'TRES EN RATLLA'");
+            Carga.carga(2);
+        }
+
+        return menu;
+    }
+
+
+    public int config() {
+        String[] o_config = {"CANVIAR NOM", "CANVIAR FITXA", "CANVIAR TAULELL", "CANVIAR MIDES DE JOC", "ENRERE", "SORTIR"};
+        var configu = JOptionPane.showOptionDialog(null, "                                                                                                         CONFIGURACIÓ",
+                "TRES EN RATLLA", 0, 2, null, o_config, o_config[5]);
+        if (configu == 0) {
+            System.out.println("Carregant: 'CANVI DE NOM'...");
+        } else if (configu == 1) {
+            System.out.println("Carregant: 'CANVI DE FITXA'...");
+        } else if (configu == 2) {
+            System.out.println("Carregant: 'CANVIAR TAULELL'...");
+        } else if (configu == 3) {
+            System.out.println("Carregant: 'CANVIAR MIDES DE JOC'...");
+        } else if (configu == 4) {
+            System.out.println("TORNANT AL MENÚ...");
+        } else {
+            System.out.println("TANCANT 'TRES EN RATLLA'...");
+            Carga.carga(2);
+        }
+
+        return configu;
+
+    }
+
+ */
+
 }
