@@ -24,7 +24,7 @@ public class TUI {
         System.out.println("2. CARREGAR PARTIDA");
         System.out.println("3. CONFIGURACIÓ");
         System.out.println("4. SORTIR\n");
-        System.out.print("Selecciona una opción: ");
+        System.out.print("Selecciona una opció: ");
     }
 
 
@@ -37,8 +37,17 @@ public class TUI {
     // --- MENÚ NOVA PARTIDA AMB RETORN D'OPCIÓ --- //
 
 
-    public void nova_partida() {
+    public void t_nova_partida() {
+
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+
         System.out.println("Iniciant: NOVA PARTIDA...");
+    }
+
+
+    public void nova_partida() {
 
         // Carga.carga(1); temps d'espera de un sego
         // joc.restartvalues(); HA DE TORNAR AL MAIN O INICIAR QUAN S'OBRI JOC
@@ -48,7 +57,7 @@ public class TUI {
         System.out.println("2. PARTIDA 1 VS IA");
         System.out.println("3. ENRERE");
         System.out.println("4. SORTIR\n");
-        System.out.print("Selecciona una opción: ");
+        System.out.print("Selecciona una opció: ");
     }
 
 
@@ -57,32 +66,6 @@ public class TUI {
         return sc.nextInt();
 
     }
-
-    // --- MENÚ CONFIGURACIÓ AMB RETORN D'OPCIÓ --- //
-
-
-    public void configuracio() {
-        System.out.println("Carregant: CONFIGURACIÓ...");
-
-        // Carga.carga(1); temps d'espera d'un segon
-
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\nCONFIGURACIÓ:\n");
-        System.out.println("1. CANVIAR NOM");
-        System.out.println("2. CANVIAR FITXA");
-        System.out.println("3. CANVIAR TAULELL");
-        System.out.println("4. CANVIAR MIDES DE JOC");
-        System.out.println("5. ENRERE");
-        System.out.println("6. SORTIR\n");
-        System.out.print("Selecciona una opción: ");
-    }
-
-    public int opcio_configuracio() {
-
-        return sc.nextInt();
-
-    }
-
-    // ----------------
 
 
     public static void m_1vs1() {
@@ -100,9 +83,65 @@ public class TUI {
     }
 
 
-    public void m_carregar_partida() {
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\nCarregant: PARTIDES GUARDADES...");
-        Carga.carga(2);
+    // ------- Carregar partida aqui. S'HAN DE LLISTAR LES PARTIDES QUE S'HAN GUARDAT EN EL DOCUMENT CREAT AMB FILES
+
+    public void t_carregar_partida() {
+
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+
+        System.out.println("Carregant: CONFIGURACIÓ...");
+    }
+
+
+    public void opcions_carregar_partida() {
+
+        // Carga.carga(1); temps d'espera de un sego
+        // joc.restartvalues(); HA DE TORNAR AL MAIN O INICIAR QUAN S'OBRI JOC
+
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\nCARREGAR PARTIDA:\n");
+        System.out.println("1. PARTIDES GUARDADES");
+        System.out.println("2. ENRERE");
+        System.out.println("3. SORTIR\n");
+        System.out.print("Selecciona una opció: ");
+    }
+
+
+    public void carregar_partides_guardades() {
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\nCarregant: PARTIDES GUARDADES\n");
+
+    }
+
+
+    // --- MENÚ CONFIGURACIÓ AMB RETORN D'OPCIÓ --- //
+
+
+    public void t_configuracio() {
+
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+
+        System.out.println("Carregant: CONFIGURACIÓ...");
+    }
+
+
+    public void configuracio() {
+
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\nCONFIGURACIÓ:\n");
+        System.out.println("1. CANVIAR NOM");
+        System.out.println("2. CANVIAR FITXA");
+        System.out.println("3. CANVIAR TAULELL");
+        System.out.println("4. CANVIAR MIDES DE JOC");
+        System.out.println("5. ENRERE");
+        System.out.println("6. SORTIR\n");
+        System.out.print("Selecciona una opció: ");
+    }
+
+    public int opcio_configuracio() {
+
+        return sc.nextInt();
 
     }
 
@@ -110,11 +149,6 @@ public class TUI {
     public void m_configuracio() {
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\nObrint: CONFIGURACIÓ...");
         Carga.carga(1);
-    }
-
-
-    public void m_sortir() {
-        System.out.println("Sortint del 'TRES EN RATLLA'...");
     }
 
 
@@ -136,6 +170,24 @@ public class TUI {
     public void tconfiguracio_mj() {
         System.out.println("Sóc la config");
     }
+
+
+    public void a_nova_partida() {
+        System.out.println("Iniciant: NOVA PARTIDA...");
+    }
+
+
+    public void a_carregar_partida() {
+        System.out.println("Iniciant: NOVA PARTIDA...");
+    }
+
+
+    public void a_configuracio() {
+        System.out.println("Iniciant: NOVA PARTIDA...");
+    }
+
+
+    // ----------------
 
 
     public void nova_partida1() {
@@ -223,13 +275,6 @@ public class TUI {
         }
 
         System.out.println("TANCANT 'TRES EN RATLLA'...");
-
-    }
-
-
-    public static void sortir2() {
-
-        System.exit(0);
 
     }
 

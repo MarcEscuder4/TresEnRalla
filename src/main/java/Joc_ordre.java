@@ -108,7 +108,7 @@ public class Joc_ordre {
         // ARRAY PER LES POSICIONS DEL JOC
         // ARRAY[i][j] = ARRAY[fila][columna]
         String[][] pt = {
-                {" ", " ", " "},
+                {"\uD83D\uDC37", " ", " "},
                 {" ", " ", " "},
                 {" ", " ", " "}
         };
@@ -116,13 +116,13 @@ public class Joc_ordre {
 
         // TAULELL AMB POSICIONS
         System.out.println("    A   B   C  ");
-        System.out.println("  ╔═══╦═══╦═══╗");
-        System.out.println("1 ║ " + pt[0][0] + " ║ " + pt[0][1] + " ║ " + pt[0][2] + " ║");
-        System.out.println("  ╠═══╬═══╬═══╣");
-        System.out.println("2 ║ " + pt[1][0] + " ║ " + pt[1][1] + " ║ " + pt[1][2] + " ║");
-        System.out.println("  ╠═══╬═══╬═══╣");
-        System.out.println("3 ║ " + pt[2][0] + " ║ " + pt[2][1] + " ║ " + pt[2][2] + " ║");
-        System.out.println("  ╚═══╩═══╩═══╝");
+        System.out.println("  ┌───┬───┬───┐");
+        System.out.println("1 │ " + pt[0][0] + " │ " + pt[0][1] + " │ " + pt[0][2] + " │");
+        System.out.println("  ├───┼───┼───┤");
+        System.out.println("2 │ " + pt[1][0] + " │ " + pt[1][1] + " │ " + pt[1][2] + " │");
+        System.out.println("  ├───┼───┼───┤");
+        System.out.println("3 │ " + pt[2][0] + " │ " + pt[2][1] + " │ " + pt[2][2] + " │");
+        System.out.println("  └───┴───┴───┘");
 
         /*
 

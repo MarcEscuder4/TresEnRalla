@@ -6,6 +6,21 @@ public class Joc {
     int torn;
 
 
+    String jugador1 = "Jugador 1";
+    String jugador2 = "Jugador 2";
+    String jugadorIA = "Jugador IA";
+
+    char fj1 = 'X';
+    char fj2 = 'O';
+
+
+    public static void sortir2() {
+
+        System.exit(0);
+
+    }
+
+
     public int getTorn() {
         return torn;
     }
@@ -90,7 +105,7 @@ public class Joc {
 
     public void configuracio_cf() {
 
-        char fj1 = 'X';
+        char fj1 = 'q';
         char fj2 = 'O';
 
 
@@ -122,14 +137,7 @@ public class Joc {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-    }
 
-    public void clean() {
-        try {
-            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-        } catch (Exception e) {
-            /*No hacer nada*/
-        }
     }
 
 }

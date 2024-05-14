@@ -4,23 +4,22 @@ public class Main {
         TUI tui = new TUI();
         Joc joc = new Joc();
 
+
+        char[] fitxa = {'O', 'X'};
+
         tui.inici1();
 
         joc.carga(2);
 
         tui.inici2();
 
-        mostrarMenuPrincipal();
-
-        return;
+        mostrarMenuPrincipal(joc,tui);
 
     }
 
+    // ELS MENUS FAN UN LOOP DE CRIDES INFINIT AMB EL WHILE (TRUE) PER FER UN RETRUN S'HA DE TRENCAR EL WHILE TRUE ASIGNANT UN BOOLEAN A ALGO I EN EL RETURN S'HA DE TRENCAR EL TRUE
 
-    public static void mostrarMenuPrincipal() {
-
-        TUI tui = new TUI();
-        Joc joc = new Joc();
+    public static void mostrarMenuPrincipal(Joc joc, TUI tui) {
 
         while (true) {
 
@@ -28,21 +27,27 @@ public class Main {
 
             switch (tui.opcio_mp()) {
                 case 1:
+                    joc.carga(1);
+                    tui.t_nova_partida();
                     joc.carga(2);
-                    menu_nova_partida();
+                    menu_nova_partida(tui, joc);
                     break;
                 case 2:
+                    joc.carga(1);
+                    tui.t_carregar_partida();
                     joc.carga(2);
-                    // menu_carregar_partida();
+                    menu_carregar_partida(tui, joc);
                     break;
                 case 3:
                     joc.carga(1);
-                    menu_configuracio();
+                    tui.t_configuracio();
+                    joc.carga(1);
+                    menu_configuracio(tui, joc);
                     break;
                 default:
                     tui.sortir1();
                     joc.carga(2);
-                    tui.sortir2();
+                    joc.sortir2();
 
             }
 
@@ -51,11 +56,8 @@ public class Main {
     }
 
 
-    public static void menu_nova_partida() {
-
-        TUI tui = new TUI();
-        Joc joc = new Joc();
-
+    public static void menu_nova_partida(TUI tui, Joc joc) {
+        
         while (true) {
 
             tui.nova_partida();
@@ -76,7 +78,7 @@ public class Main {
                 default:
                     tui.sortir1();
                     joc.carga(2);
-                    tui.sortir2();
+                    joc.sortir2();
 
             }
 
@@ -85,11 +87,38 @@ public class Main {
     }
 
 
-    public static void menu_configuracio() {
+    public static void menu_carregar_partida(TUI tui, Joc joc) {
 
-        TUI tui = new TUI();
-        Joc joc = new Joc();
+        while (true) {
 
+            tui.opcions_carregar_partida();
+
+            switch (tui.opcio_np()) {
+                case 1:
+                    joc.carga(1);
+                    tui.carregar_partides_guardades();
+                    // LLISTA DE LES PARTIDES GUARDADES
+                    joc.carga(1);
+                    // CARGAR LA PARTIDA GUARDADA
+                    return;
+                case 2:
+                    tui.back();
+                    joc.carga(1);
+                    return;
+                default:
+                    tui.sortir1();
+                    joc.carga(2);
+                    joc.sortir2();
+
+            }
+
+        }
+
+    }
+
+
+    public static void menu_configuracio(TUI tui, Joc joc) {
+        
         while (true) {
 
             tui.configuracio();
@@ -102,35 +131,31 @@ public class Main {
                     joc.carga(1);
                     tui.back_configuracio_cn();
                     joc.carga(1);
-                    menu_configuracio();
                     break;
                 case 2:
-                    System.out.println("\n\n\n\n\n\n\n\n\n\n\nAccedint a: CANVI DE FITXA");
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\nAccedint a: CANVI DE FITXA\n");
                     joc.carga(1);
                     // config canvi fitxa
                     joc.carga(1);
                     tui.back_configuracio_cf();
                     joc.carga(1);
-                    menu_configuracio();
                     return;
                 case 3:
-                    System.out.println("\n\n\n\n\n\n\n\n\n\n\nAccedint a: CANVI DE TAULELL");
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\nAccedint a: CANVI DE TAULELL\n");
                     joc.carga(1);
                     //
                     joc.carga(1);
                     tui.back_configuracio_ct();
                     joc.carga(1);
-                    menu_configuracio();
-                    break;
+                    return;
                 case 4:
-                    System.out.println("\n\n\n\n\n\n\n\n\n\n\nAccedint a: MIDES DE JOC");
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\nAccedint a: MIDES DE JOC\n");
                     joc.carga(1);
                     //
                     joc.carga(1);
                     tui.back_configuracio_mj();
                     joc.carga(1);
-                    menu_configuracio();
-                    break;
+                    return;
                 case 5:
                     tui.back();
                     joc.carga(1);
@@ -138,7 +163,7 @@ public class Main {
                 default:
                     tui.sortir1();
                     joc.carga(2);
-                    tui.sortir2();
+                    joc.sortir2();
 
             }
 
