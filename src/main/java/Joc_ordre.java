@@ -85,7 +85,7 @@ public class Joc_ordre {
 
 
         // TEMPS D'ESPERA PERQUE ELS JUGADORS PUGUIN LLEGIR EL TERMINAL
-        Carga.carga(3);
+
 
 
 

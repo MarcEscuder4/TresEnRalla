@@ -1,11 +1,49 @@
+// import static tresenralla.Files.*;
+
 public class Main {
     public static void main(String[] args) {
+
 
         TUI tui = new TUI();
         Joc joc = new Joc();
 
+/*  CARGA DE APP ESTIL RETRO
+        for (int i = 0 ; i < 3 ; i++){
+            tui.inici1_1();
+            joc.carga(1);
+            tui.inici1_2();
+            joc.carga(1);
+            tui.inici1_3();
+            joc.carga(1);
+        }
 
-        char[] fitxa = {'O', 'X'};
+
+        tui.tvoid();
+        joc.carga_mili(500);
+
+
+        for (int i = 0 ; i < 3 ; i++) {
+            tui.inici2_3();
+            joc.carga_mili(750);
+            tui.inici2_1();
+            joc.carga_mili(750);
+            tui.inici2_2();
+            joc.carga_mili(750);
+
+        }
+
+
+        tui.tvoid();
+
+
+        joc.carga_mili(750);
+
+
+        menu_principal(joc,tui);
+
+ */
+
+        // CARGA DE APP "RÁPIDA"
 
         tui.inici1();
 
@@ -13,13 +51,14 @@ public class Main {
 
         tui.inici2();
 
-        mostrarMenuPrincipal(joc,tui);
+        menu_principal(joc,tui);
+
 
     }
 
     // ELS MENUS FAN UN LOOP DE CRIDES INFINIT AMB EL WHILE (TRUE) PER FER UN RETRUN S'HA DE TRENCAR EL WHILE TRUE ASIGNANT UN BOOLEAN A ALGO I EN EL RETURN S'HA DE TRENCAR EL TRUE
 
-    public static void mostrarMenuPrincipal(Joc joc, TUI tui) {
+    public static void menu_principal(Joc joc, TUI tui) {
 
         while (true) {
 
@@ -106,6 +145,7 @@ public class Main {
                     joc.carga(1);
                     return;
                 default:
+
                     tui.sortir1();
                     joc.carga(2);
                     joc.sortir2();
@@ -127,7 +167,7 @@ public class Main {
                 case 1:
                     System.out.println("\n\n\n\n\n\n\n\n\n\n\nAccedint a: CANVI DE NOM\n");
                     joc.carga(1);
-                    joc.configuracio_cn();
+                    // joc.configuracio_canvi_nom();
                     joc.carga(1);
                     tui.back_configuracio_cn();
                     joc.carga(1);
@@ -141,9 +181,21 @@ public class Main {
                     joc.carga(1);
                     return;
                 case 3:
-                    System.out.println("\n\n\n\n\n\n\n\n\n\n\nAccedint a: CANVI DE TAULELL\n");
+                    tui.tconfiguracio_ct_i();
                     joc.carga(1);
-                    //
+                    tui.tconfiguracio_ct();
+                    joc.carga(2);
+                    tui.tconfiguracio_ct_1();
+                    joc.carga(2);
+                    tui.tconfiguracio_ct_2();
+                    joc.carga(2);
+                    tui.tconfiguracio_ct_3();
+                    joc.carga(2);
+                    tui.tconfiguracio_ct_4();
+                    joc.carga(2);
+                    tui.tconfiguracio_ct_5();
+                    joc.carga(2);
+                    tui.tconfiguracio_ct_o();
                     joc.carga(1);
                     tui.back_configuracio_ct();
                     joc.carga(1);

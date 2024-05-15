@@ -6,19 +6,87 @@ public class TUI {
 
 
     public void inici1() {
-        System.out.println("\nIniciant: 'TRES EN RATLLA'\n ");
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+        System.out.print("\nIniciant: 'TRES EN RATLLA'...");
+    }
+
+
+    public void inici1_1() {
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+        System.out.print("\nIniciant: 'TRES EN RATLLA'.");
+    }
+
+
+    public void inici1_2() {
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+
+        System.out.print("\nIniciant: 'TRES EN RATLLA'..");
+    }
+
+
+    public void inici1_3() {
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+
+        System.out.print("\nIniciant: 'TRES EN RATLLA'...");
     }
 
 
     public void inici2() {
-        System.out.println("Carregant Menú...\n");
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+
+        System.out.print("Carregant Menú...");
     }
 
+
+    public void inici2_3() {
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+
+        System.out.print("Carregant Menú...");
+    }
+
+    public void inici2_1() {
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+
+        System.out.print("Carregant Menú.");
+    }
+
+    public void inici2_2() {
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+
+        System.out.print("Carregant Menú..");
+    }
+
+
+    public void tvoid() {
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+    }
 
     // --- MENÚ PRINCIPAL AMB RETORN D'OPCIÓ --- //
 
 
     public void menu_principal() {
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+
         System.out.println("\nMENU PRINCIPAL:\n");
         System.out.println("1. NOVA PARTIDA");
         System.out.println("2. CARREGAR PARTIDA");
@@ -43,7 +111,7 @@ public class TUI {
             System.out.println();
         }
 
-        System.out.println("Iniciant: NOVA PARTIDA...");
+        System.out.print("Iniciant: NOVA PARTIDA...");
     }
 
 
@@ -91,7 +159,7 @@ public class TUI {
             System.out.println();
         }
 
-        System.out.println("Carregant: CONFIGURACIÓ...");
+        System.out.print("Carregant: PARTIDES GUARDADES...");
     }
 
 
@@ -109,7 +177,7 @@ public class TUI {
 
 
     public void carregar_partides_guardades() {
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\nCarregant: PARTIDES GUARDADES\n");
+        System.out.print("\n\n\n\n\n\n\n\n\n\n\n\nCarregant: PARTIDES GUARDADES");
 
     }
 
@@ -123,7 +191,7 @@ public class TUI {
             System.out.println();
         }
 
-        System.out.println("Carregant: CONFIGURACIÓ...");
+        System.out.print("Carregant: CONFIGURACIÓ...");
     }
 
 
@@ -148,7 +216,6 @@ public class TUI {
 
     public void m_configuracio() {
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\nObrint: CONFIGURACIÓ...");
-        Carga.carga(1);
     }
 
 
@@ -162,8 +229,114 @@ public class TUI {
     }
 
 
+    public void tconfiguracio_ct_i() {
+        for (int i = 0; i < 50; ++i) {
+
+            System.out.println();
+
+        }
+
+        System.out.print("Accedint a: CANVI DE TAULELL");
+    }
+
+
     public void tconfiguracio_ct() {
-        System.out.println("Sóc la config");
+        for (int i = 0; i < 50; ++i) {
+
+            System.out.println();
+
+        }
+
+        System.out.print("Escull amb quin taulell vols jugar:");
+    }
+
+
+    public void tconfiguracio_ct_1() {
+        for (int i = 0; i < 50; ++i) {
+
+            System.out.println();
+
+        }
+
+        System.out.println("1. None\n");
+        System.out.println("    A   B   C  ");
+        System.out.println("               ");
+        System.out.println("1              ");
+        System.out.println("               ");
+        System.out.println("2              ");
+        System.out.println("               ");
+        System.out.println("3              ");
+        System.out.println("               ");
+        System.out.println();
+    }
+
+
+    public void tconfiguracio_ct_2() {
+        System.out.println("\n2. Simple\n");
+        System.out.println("    A   B   C  ");
+        System.out.println("               ");
+        System.out.println("1     |   |    ");
+        System.out.println("    ─   ─   ─  ");
+        System.out.println("2     |   |    ");
+        System.out.println("    ─   ─   ─  ");
+        System.out.println("3     |   |    ");
+        System.out.println("               ");
+        System.out.println();
+    }
+
+
+    public void tconfiguracio_ct_3() {
+        System.out.println("\n3. Basic\n");
+        System.out.println("    A   B   C  ");
+        System.out.println("    ─   ─   ─  ");
+        System.out.println("1 |   |   |   |");
+        System.out.println("    ─   ─   ─  ");
+        System.out.println("2 |   |   |   |");
+        System.out.println("    ─   ─   ─  ");
+        System.out.println("3 |   |   |   |");
+        System.out.println("    ─   ─   ─  ");
+        System.out.println();
+    }
+
+
+    public void tconfiguracio_ct_4() {
+        System.out.println("\n4. Complete\n");
+        System.out.println("    A   B   C  ");
+        System.out.println("  ┌───┬───┬───┐");
+        System.out.println("1 │   │   │   │");
+        System.out.println("  ├───┼───┼───┤");
+        System.out.println("2 │   │   │   │");
+        System.out.println("  ├───┼───┼───┤");
+        System.out.println("3 │   │   │   │");
+        System.out.println("  └───┴───┴───┘");
+        System.out.println();
+    }
+
+    public void tconfiguracio_ct_5() {
+        System.out.println("\n5. Complex\n");
+        System.out.println("    A   B   C  " );
+        System.out.println("  ╔═══╦═══╦═══╗");
+        System.out.println("1 ║   ║   ║   ║");
+        System.out.println("  ╠═══╬═══╬═══╣");
+        System.out.println("2 ║   ║   ║   ║");
+        System.out.println("  ╠═══╬═══╬═══╣");
+        System.out.println("3 ║   ║   ║   ║");
+        System.out.println("  ╚═══╩═══╩═══╝");
+        System.out.println();
+
+    }
+
+
+    public void tconfiguracio_ct_o() {
+        System.out.print("\n\n\n\n\n\n\n\n\n\n\n\nAmb quin taulell vols jugar? ");
+        int n_taulell = sc.nextInt();
+    }
+
+
+    public static void back_configuracio_ct() {
+
+        System.out.print("\n\n\n\n\n\n\n\n\n\n\n\nTaulell de la partida canviat amb èxit!");
+
     }
 
 
@@ -172,63 +345,7 @@ public class TUI {
     }
 
 
-    public void a_nova_partida() {
-        System.out.println("Iniciant: NOVA PARTIDA...");
-    }
-
-
-    public void a_carregar_partida() {
-        System.out.println("Iniciant: NOVA PARTIDA...");
-    }
-
-
-    public void a_configuracio() {
-        System.out.println("Iniciant: NOVA PARTIDA...");
-    }
-
-
     // ----------------
-
-
-    public void nova_partida1() {
-        for (int i = 0; i < 50; ++i) {
-            System.out.println();
-        }
-
-        Carga.carga(2);
-
-        System.out.println("TRES EN RATLLA: NOVA PARTIDA");
-
-        System.out.println(" \n \n \n \n \n \n ");
-
-
-        // joc.jugar();
-
-    }
-
-    public void carregar_partida() {
-        for (int i = 0; i < 50; ++i) {
-            System.out.println();
-        }
-
-        Carga.carga(2);
-
-        System.out.println("TRES EN RATLLA: CONFIGURACIÓ");
-
-    }
-
-    public void configuracioTUI() {
-        for (int i = 0; i < 50; ++i) {
-            System.out.println();
-        }
-
-        Carga.carga(2);
-
-        System.out.println("TRES EN RATLLA: CONFIGURACIÓ\n\n\n\n\n\n\n\n");
-
-        Carga.carga(1);
-
-    }
 
 
     public static void back() {
@@ -248,13 +365,6 @@ public class TUI {
     public static void back_configuracio_cf() {
 
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\nFitxes de Jugadors canviats amb èxit!\n");
-
-    }
-
-
-    public static void back_configuracio_ct() {
-
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\nTaulell de la partida canviat amb èxit!\n");
 
     }
 
