@@ -121,10 +121,11 @@ public class TUI {
         // joc.restartvalues(); HA DE TORNAR AL MAIN O INICIAR QUAN S'OBRI JOC
 
         System.out.println("\n\n\n\n\n\n\n\n\n\n\nNOVA PARTIDA:\n");
-        System.out.println("1. PARTIDA 1 VS 1");
-        System.out.println("2. PARTIDA 1 VS IA");
-        System.out.println("3. ENRERE");
-        System.out.println("4. SORTIR\n");
+        System.out.println("1. PARTIDA 1 VS 1 CLÀSSICA");
+        System.out.println("2. PARTIDA 1 VS 1 PERSONALITZABLE");
+        System.out.println("3. PARTIDA 1 VS IA");
+        System.out.println("4. ENRERE");
+        System.out.println("5. SORTIR\n");
         System.out.print("Selecciona una opció: ");
     }
 
@@ -136,8 +137,49 @@ public class TUI {
     }
 
 
+    public void infopartides() {
+    // CREAR UN MARC PER LA INFO
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
+
+        System.out.println("          -  INFORMACIÓ DE LES PARTIDES  -      \n\n" +
+                         "           -  PARTIDA 1 VS 1 CLÀSSICA  -      " +
+                         "\nEn aquest mode de joc és juga amb un taulell,\n" +
+                         "de diseny a escollir a la secció: CONFIGURACIÓ, 3x3.\n" +
+                         "No es poden canviar els noms, ni les fitxes.\n");
+        System.out.println("       - PARTIDA 1 VS 1 PERSONALITZABLE  -\n" +
+                         "Aquest mode permet canviar els noms, dissenys de\n" +
+                         "les fitxes, mides del taulell (de 3 a 10) i disseny\n" +
+                         "del taulell (només s'aplica si és 3x3).\n" +
+                         "Próximament per totes les mides del taulell\n" +
+                         "s'aplicaràn tots els dissenys disponibles.\n");
+        System.out.println("            -  PARTIDA 1 VS IA  -\n" +
+                         "En aquest mode és juga contra la IA 'minimax'\n" +
+                         "en un taulell 3x3. Disseny del taulell personalitzable.\n" +
+                         "Podràs guanyar a una IA?\n");
+
+    }
+
+
+    public static void m_c1vs1() {
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\nIniciant: PARTIDA CLÀSSICA 1 VS 1");
+        // Carga.carga(1);
+        // joc.nova_partida1vs1();
+
+    }
+
+
+    public static void m_c1vs1_1() {
+        System.out.println("\nJUGADOR 1 (X) VS JUGADOR 2 (O)\n");
+        // Carga.carga(1);
+        // joc.nova_partida1vs1();
+
+    }
+
+
     public static void m_1vs1() {
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\nIniciant: PARTIDA 1 VS 1");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\nIniciant: PARTIDA PERSONALITZABLE 1 VS 1");
         // Carga.carga(1);
         // joc.nova_partida1vs1();
 
@@ -220,12 +262,17 @@ public class TUI {
 
 
     public void tconfiguracio_cn() {
-        System.out.println("-");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\nAccedint a: CANVI DE NOM\n");
     }
 
 
     public void tconfiguracio_cf() {
-        System.out.println("Sóc la config");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\nAccedint a: CANVI DE FITXA\n");
+    }
+
+
+    public void tconfiguracio_mides_joc() {
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\nAccedint a: MIDES DE JOC\n");
     }
 
 
@@ -251,6 +298,20 @@ public class TUI {
     }
 
 
+    public void tconfiguracio_oe1() {
+        System.out.println("\nHas seleccionat el taulell 'None':");
+        System.out.println();
+        System.out.println("    A   B   C  ");
+        System.out.println("               ");
+        System.out.println("1              ");
+        System.out.println("               ");
+        System.out.println("2              ");
+        System.out.println("               ");
+        System.out.println("3              ");
+        System.out.println("               ");
+    }
+
+
     public void tconfiguracio_ct_1() {
         for (int i = 0; i < 50; ++i) {
 
@@ -271,6 +332,20 @@ public class TUI {
     }
 
 
+    public void tconfiguracio_oe2() {
+        System.out.println("\nHas seleccionat el taulell 'Simple':");
+        System.out.println();
+        System.out.println("    A   B   C  ");
+        System.out.println("               ");
+        System.out.println("1     |   |    ");
+        System.out.println("    ─   ─   ─  ");
+        System.out.println("2     |   |    ");
+        System.out.println("    ─   ─   ─  ");
+        System.out.println("3     |   |    ");
+        System.out.println("               ");
+    }
+
+
     public void tconfiguracio_ct_2() {
         System.out.println("\n2. Simple\n");
         System.out.println("    A   B   C  ");
@@ -282,6 +357,20 @@ public class TUI {
         System.out.println("3     |   |    ");
         System.out.println("               ");
         System.out.println();
+    }
+
+
+    public void tconfiguracio_oe3() {
+        System.out.println("\nHas seleccionat el taulell 'Basic':");
+        System.out.println();
+        System.out.println("    A   B   C  ");
+        System.out.println("    ─   ─   ─  ");
+        System.out.println("1 |   |   |   |");
+        System.out.println("    ─   ─   ─  ");
+        System.out.println("2 |   |   |   |");
+        System.out.println("    ─   ─   ─  ");
+        System.out.println("3 |   |   |   |");
+        System.out.println("    ─   ─   ─  ");
     }
 
 
@@ -299,6 +388,20 @@ public class TUI {
     }
 
 
+    public void tconfiguracio_oe4() {
+        System.out.println("\nHas seleccionat el taulell 'Complete':");
+        System.out.println();
+        System.out.println("    A   B   C  ");
+        System.out.println("  ┌───┬───┬───┐");
+        System.out.println("1 │   │   │   │");
+        System.out.println("  ├───┼───┼───┤");
+        System.out.println("2 │   │   │   │");
+        System.out.println("  ├───┼───┼───┤");
+        System.out.println("3 │   │   │   │");
+        System.out.println("  └───┴───┴───┘");
+    }
+
+
     public void tconfiguracio_ct_4() {
         System.out.println("\n4. Complete\n");
         System.out.println("    A   B   C  ");
@@ -311,6 +414,21 @@ public class TUI {
         System.out.println("  └───┴───┴───┘");
         System.out.println();
     }
+
+
+    public void tconfiguracio_oe5() {
+        System.out.println("\nHas seleccionat el taulell 'Complex':");
+        System.out.println();
+        System.out.println("    A   B   C  " );
+        System.out.println("  ╔═══╦═══╦═══╗");
+        System.out.println("1 ║   ║   ║   ║");
+        System.out.println("  ╠═══╬═══╬═══╣");
+        System.out.println("2 ║   ║   ║   ║");
+        System.out.println("  ╠═══╬═══╬═══╣");
+        System.out.println("3 ║   ║   ║   ║");
+        System.out.println("  ╚═══╩═══╩═══╝");
+    }
+
 
     public void tconfiguracio_ct_5() {
         System.out.println("\n5. Complex\n");
@@ -327,9 +445,20 @@ public class TUI {
     }
 
 
+    public void tconfiguracio_oerror() {
+        System.out.print("\nNo existeix cap taulell amb la opció seleccionada.\n\n\nTornant a la CONFIGURACIÓ...");
+
+    }
+
+
     public void tconfiguracio_ct_o() {
         System.out.print("\n\n\n\n\n\n\n\n\n\n\n\nAmb quin taulell vols jugar? ");
+    }
+
+
+    public int opcio_taulell() {
         int n_taulell = sc.nextInt();
+        return n_taulell;
     }
 
 

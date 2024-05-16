@@ -99,18 +99,31 @@ public class Main {
         
         while (true) {
 
+            tui.infopartides();
+
+            joc.carga(7);
+
             tui.nova_partida();
 
             switch (tui.opcio_np()) {
                 case 1:
                     joc.carga(1);
-                    tui.m_1vs1();
+                    tui.m_c1vs1();
+                    joc.carga(1);
+                    tui.m_c1vs1_1();
+                    joc.carga(1);
+                    joc.joc(); // TORNAR A MODIFICAR
+
                     break;
                 case 2:
                     joc.carga(1);
-                    tui.m_1vsia();
+                    tui.m_1vs1();
                     break;
                 case 3:
+                    joc.carga(1);
+                    tui.m_1vsia();
+                    break;
+                case 4:
                     tui.back();
                     joc.carga(1);
                     return;
@@ -165,7 +178,7 @@ public class Main {
 
             switch (tui.opcio_configuracio()) {
                 case 1:
-                    System.out.println("\n\n\n\n\n\n\n\n\n\n\nAccedint a: CANVI DE NOM\n");
+                    tui.tconfiguracio_cn();
                     joc.carga(1);
                     // joc.configuracio_canvi_nom();
                     joc.carga(1);
@@ -173,7 +186,7 @@ public class Main {
                     joc.carga(1);
                     break;
                 case 2:
-                    System.out.println("\n\n\n\n\n\n\n\n\n\n\nAccedint a: CANVI DE FITXA\n");
+                    tui.tconfiguracio_cf();
                     joc.carga(1);
                     // config canvi fitxa
                     joc.carga(1);
@@ -196,12 +209,48 @@ public class Main {
                     tui.tconfiguracio_ct_5();
                     joc.carga(2);
                     tui.tconfiguracio_ct_o();
-                    joc.carga(1);
-                    tui.back_configuracio_ct();
+                    switch (tui.opcio_taulell()) {
+                        case 1:
+                            tui.tconfiguracio_oe1();
+                            joc.carga(2);
+                            tui.back_configuracio_ct();
+                            menu_configuracio(tui, joc);
+                            break;
+                        case 2:
+                            tui.tconfiguracio_oe2();
+                            joc.carga(2);
+                            tui.back_configuracio_ct();
+                            menu_configuracio(tui, joc);
+                            break;
+                        case 3:
+                            tui.tconfiguracio_oe3();
+                            joc.carga(2);
+                            tui.back_configuracio_ct();
+                            menu_configuracio(tui, joc);
+                            break;
+                        case 4:
+                            tui.tconfiguracio_oe4();
+                            joc.carga(2);
+                            tui.back_configuracio_ct();
+                            menu_configuracio(tui, joc);
+                            break;
+                        case 5:
+                            tui.tconfiguracio_oe5();
+                            joc.carga(2);
+                            tui.back_configuracio_ct();
+                            menu_configuracio(tui, joc);
+                            break;
+                        default:
+                            joc.carga(1);
+                            tui.tconfiguracio_oerror();
+                            joc.carga(2);
+                            menu_configuracio(tui, joc);
+                            break;
+                    }
                     joc.carga(1);
                     return;
                 case 4:
-                    System.out.println("\n\n\n\n\n\n\n\n\n\n\nAccedint a: MIDES DE JOC\n");
+                    tui.tconfiguracio_mides_joc();
                     joc.carga(1);
                     //
                     joc.carga(1);
