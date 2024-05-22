@@ -107,7 +107,7 @@ public class Main {
 
 
     public static void menu_nova_partida(TUI tui, Joc joc) {
-        
+
         while (true) {
 
             tui.infopartides();
@@ -124,7 +124,7 @@ public class Main {
                     tui.m_c1vs1_1();
                     joc.carga(1);
                     joc.joc(); // TORNAR A MODIFICAR
-
+                    menu_nova_partida(tui, joc);
                     break;
                 case 2:
                     joc.carga(1);
@@ -182,7 +182,7 @@ public class Main {
 
 
     public static void menu_configuracio(TUI tui, Joc joc) {
-        
+
         while (true) {
 
             tui.configuracio();

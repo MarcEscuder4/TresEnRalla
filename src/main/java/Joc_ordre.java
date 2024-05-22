@@ -51,8 +51,6 @@ public class Joc_ordre {
     }
 
 
-
-
     public void joc() {
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.ENGLISH);
@@ -87,8 +85,6 @@ public class Joc_ordre {
         // TEMPS D'ESPERA PERQUE ELS JUGADORS PUGUIN LLEGIR EL TERMINAL
 
 
-
-
         String jugador2 = JOptionPane.showInputDialog("Nom del jugador 2 (O)");
         System.out.println("Benvingut " + jugador2 + " ets el JUGADOR 2, jugues amb les 'O'.");
 
@@ -108,21 +104,10 @@ public class Joc_ordre {
         // ARRAY PER LES POSICIONS DEL JOC
         // ARRAY[i][j] = ARRAY[fila][columna]
         String[][] pt = {
-                {"\uD83D\uDC37", " ", " "},
+                {" ", " ", " "},
                 {" ", " ", " "},
                 {" ", " ", " "}
         };
-
-
-        // TAULELL AMB POSICIONS
-        System.out.println("    A   B   C  ");
-        System.out.println("  ┌───┬───┬───┐");
-        System.out.println("1 │ " + pt[0][0] + " │ " + pt[0][1] + " │ " + pt[0][2] + " │");
-        System.out.println("  ├───┼───┼───┤");
-        System.out.println("2 │ " + pt[1][0] + " │ " + pt[1][1] + " │ " + pt[1][2] + " │");
-        System.out.println("  ├───┼───┼───┤");
-        System.out.println("3 │ " + pt[2][0] + " │ " + pt[2][1] + " │ " + pt[2][2] + " │");
-        System.out.println("  └───┴───┴───┘");
 
         /*
 
@@ -174,17 +159,26 @@ public class Joc_ordre {
 
         int xpx = sc.nextInt();
 
-        String[][] posicions = new String[xpx][xpx];
+        char[][] pt = new char[xpx][xpx];
 
         for (int i = 0; i < xpx; i++) {
             for (int j = 0; j < xpx; j++) {
-                posicions[i][j] = "";
+                pt[i][j] = ' ';
             }
+            // Array per allargar el taulell de joc
+
+            //  ----------------------------
+
+            // TAULELL AMB POSICIONS
+            System.out.println("    A   B   C  ");
+            System.out.println("  ┌───┬───┬───┐");
+            System.out.println("1 │ " + pt[0][0] + " │ " + pt[0][1] + " │ " + pt[0][2] + " │");
+            System.out.println("  ├───┼───┼───┤");
+            System.out.println("2 │ " + pt[1][0] + " │ " + pt[1][1] + " │ " + pt[1][2] + " │");
+            System.out.println("  ├───┼───┼───┤");
+            System.out.println("3 │ " + pt[2][0] + " │ " + pt[2][1] + " │ " + pt[2][2] + " │");
+            System.out.println("  └───┴───┴───┘");
+
         }
     }
-    // Array per allargar el taulell de joc
-
-    //  ----------------------------
-
-
 }

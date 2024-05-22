@@ -138,32 +138,32 @@ public class TUI {
 
 
     public void infopartides() {
-    // CREAR UN MARC PER LA INFO
+        // CREAR UN MARC PER LA INFO
         for (int i = 0; i < 50; ++i) {
             System.out.println();
         }
 
         System.out.println("          -  INFORMACIÓ DE LES PARTIDES  -      \n\n" +
-                         "           -  PARTIDA 1 VS 1 CLÀSSICA  -      " +
-                         "\nEn aquest mode de joc és juga amb un taulell,\n" +
-                         "de diseny a escollir a la secció: CONFIGURACIÓ, 3x3.\n" +
-                         "No es poden canviar els noms, ni les fitxes.\n");
+                "           -  PARTIDA 1 VS 1 CLÀSSICA  -      " +
+                "\nEn aquest mode de joc és juga amb un taulell,\n" +
+                "de diseny a escollir a la secció: CONFIGURACIÓ, 3x3.\n" +
+                "No es poden canviar els noms, ni les fitxes.\n");
         System.out.println("       - PARTIDA 1 VS 1 PERSONALITZABLE  -\n" +
-                         "Aquest mode permet canviar els noms, dissenys de\n" +
-                         "les fitxes, mides del taulell (de 3 a 10) i disseny\n" +
-                         "del taulell (només s'aplica si és 3x3).\n" +
-                         "Próximament per totes les mides del taulell\n" +
-                         "s'aplicaràn tots els dissenys disponibles.\n");
+                "Aquest mode permet canviar els noms, dissenys de\n" +
+                "les fitxes, mides del taulell (de 3 a 10) i disseny\n" +
+                "del taulell (només s'aplica si és 3x3).\n" +
+                "Próximament per totes les mides del taulell\n" +
+                "s'aplicaràn tots els dissenys disponibles.\n");
         System.out.println("            -  PARTIDA 1 VS IA  -\n" +
-                         "En aquest mode és juga contra la IA 'minimax'\n" +
-                         "en un taulell 3x3. Disseny del taulell personalitzable.\n" +
-                         "Podràs guanyar a una IA?\n");
+                "En aquest mode és juga contra la IA 'minimax'\n" +
+                "en un taulell 3x3. Disseny del taulell personalitzable.\n" +
+                "Podràs guanyar a una IA?\n");
 
     }
 
 
     public static void m_c1vs1() {
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\nIniciant: PARTIDA CLÀSSICA 1 VS 1");
+        System.out.print("\n\n\n\n\n\n\n\n\n\n\n\nIniciant: PARTIDA CLÀSSICA 1 VS 1\n");
         // Carga.carga(1);
         // joc.nova_partida1vs1();
 

@@ -1,14 +1,20 @@
 import java.util.Scanner;
 
 public class Joc {
-    public static void joc() {
+
+
+
+    public void joc() {
         Scanner scanner = new Scanner(System.in);
 
         // Definir jugadores y sus fichas
         String[] jugadores = {"Jugador 1", "Jugador 2"};
         char[] fichas = {'X', 'O'};
 
+
         // Tablero de juego
+        int mides_taulell;
+
         char[][] tablero = new char[3][3];
 
         // Bucle principal del juego
@@ -27,8 +33,10 @@ public class Joc {
             }
         }
 
+
+
         // Si no hay ganador después de 9 turnos, el juego termina en empate
-        System.out.println("El juego ha terminado en empate.");
+        System.out.println("\nEl juego ha terminado en empate.\n");
         mostrarTablero(tablero);
 
         scanner.close();
@@ -65,6 +73,14 @@ public class Joc {
         } while (fila < 1 || fila > 3 || columna < 0 || columna > 2 || tablero[fila - 1][columna] != '\u0000');
 
         tablero[fila - 1][columna] = ficha;
+    }
+
+    // TEST
+    public void sumar() {
+        int a = 20;
+        int b= 29;
+
+        int suma = a + b;
     }
 
     // Método para verificar si hay un ganador
@@ -117,61 +133,6 @@ public class Joc {
 
     }
 
-
-    public void carregar_partida() {
-
-    }
-
-    public void restartvalues() {
-        String jugador1 = "Jugador 1";
-        String jugador2 = "Jugador 2";
-        String jugadorIA = "Jugador IA";
-
-        char fj1 = 'X';
-        char fj2 = 'O';
-
-
-        char[][] taulell;
-        int torn;
-
-
-    }
 }
- /*
-    // CLASSE JUGADOR PERMETRÀ PODER SELECCIONAR NOM I FITXA, TANT PER JUGADOR1 COM JUGADOR2
-    public class Jugador {
-        private String nom;
-        private String fitxa;
-
-        public Jugador() {
-            this.nom = nom;
-            this.fitxa = fitxa;
-        }
-
-        public String getNom() {
-            return nom;
-        }
-
-        public String getFitxa() {
-            return fitxa;
-        }
-    }
-
-    public int getTorn() {
-        return torn;
-    }
-
-
-    public char[][] getTaulell() {
-        return taulell;
-    }
-
-    // REINICI DE TAULELL I TORN
-    public void novaPartida() {
-        torn = 1;
-    }
-
-
-  */
 
 

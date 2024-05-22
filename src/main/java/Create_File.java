@@ -1,8 +1,5 @@
-import java.io.File;
+import java.io.*;
 import java.util.Scanner;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.FileNotFoundException;
 
 public class Create_File {
     public void crear() {
@@ -10,8 +7,7 @@ public class Create_File {
             File myObj = new File("dadestr.txt");
             if (myObj.createNewFile()) {
                 System.out.println("Arxiu creat: " + myObj.getName());
-            }
-            else {
+            } else {
                 System.out.println("El arxiu ja existeix.");
             }
         } catch (IOException e) {
@@ -22,9 +18,9 @@ public class Create_File {
     }
 
 
-    public void escriure () {
+    public void escriure() {
         try {
-            FileWriter myWriter = new FileWriter ("dadestr.txt");
+            FileWriter myWriter = new FileWriter("dadestr.txt");
             myWriter.write("Dades intriduides al document!");
             myWriter.close();
             System.out.println("S'ha escrit en el fitxer amb èxit");
@@ -72,5 +68,4 @@ public class Create_File {
             System.out.println("Error al eliminar el fitxer.");
         }
     }
-
 }
