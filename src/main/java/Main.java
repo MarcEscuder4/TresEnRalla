@@ -6,6 +6,17 @@ public class Main {
 
         TUI tui = new TUI();
         Joc joc = new Joc();
+        Create_File files = new Create_File();
+
+        files.crear();
+
+        files.escriure();
+
+        files.llegir();
+
+        files.obtenir_info();
+
+        // files.eliminar_arxiu();
 
 /*  CARGA DE APP ESTIL RETRO
         for (int i = 0 ; i < 3 ; i++){

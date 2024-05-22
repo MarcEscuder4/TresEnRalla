@@ -1,42 +1,76 @@
-import java.io.*;
+import java.io.File;
 import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.FileNotFoundException;
 
 public class Create_File {
-    public static void main(String[] args) throws IOException {
+    public void crear() {
+        try {
+            File myObj = new File("dadestr.txt");
+            if (myObj.createNewFile()) {
+                System.out.println("Arxiu creat: " + myObj.getName());
+            }
+            else {
+                System.out.println("El arxiu ja existeix.");
+            }
+        } catch (IOException e) {
+            System.out.println("Ha succeït un error.");
+            e.printStackTrace();
+        }
 
-        File txt_tres_en_ratlla = new File("~Desktop/git/TresEnRalla/Configuracio_TresEnRatlla.txt"); // RUTA ON GUARDAR EL FITXER DE TEXT
-        FileWriter myWriter = new FileWriter("Configuracio_TresEnRatlla.txt");
-        Scanner myReader = new Scanner(txt_tres_en_ratlla);
+    }
 
 
-        if (txt_tres_en_ratlla.createNewFile()) {
-            System.out.println("Arxiu creat: " + txt_tres_en_ratlla.getName());
+    public void escriure () {
+        try {
+            FileWriter myWriter = new FileWriter ("dadestr.txt");
+            myWriter.write("Dades intriduides al document!");
+            myWriter.close();
+            System.out.println("S'ha escrit en el fitxer amb èxit");
+        } catch (IOException e) {
+            System.out.println("Ha succeït un error.");
+            e.printStackTrace();
+        }
+
+    }
+
+    public void llegir() {
+        try {
+            File myObj = new File("dadestr.txt");
+            Scanner sc = new Scanner(myObj);
+            while (sc.hasNextLine()) {
+                String data = sc.nextLine();
+                System.out.println(data);
+            }
+            sc.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Ha succeït un error.");
+            e.printStackTrace();
+        }
+
+    }
+
+    public void obtenir_info() {
+        File myObj = new File("dadestr.txt");
+        if (myObj.exists()) {
+            System.out.println("File name: " + myObj.getName());
+            System.out.println("Ruta absoluta: " + myObj.getAbsolutePath());
+            System.out.println("Disponible per escriure: " + myObj.canWrite());
+            System.out.println("Disponible per llegir: " + myObj.canRead());
+            System.out.println("Tamany en bits: " + myObj.length());
         } else {
-            System.out.println("El arxiu ja existeix.");
+            System.out.println("El arxiu no existeix.");
         }
+    }
 
-
-        myWriter.write("Mides del taulell...");
-        myWriter.close();
-
-        System.out.println("Dades de configuració escrites correctament.");
-
-
-        while (myReader.hasNextLine()) {
-            String data = myReader.nextLine();
-            System.out.println(data);
+    public void eliminar_arxiu() {
+        File myObj = new File("dadestr.txt");
+        if (myObj.delete()) {
+            System.out.println("S'ha eliminat el arxiu: " + myObj.getName());
+        } else {
+            System.out.println("Error al eliminar el fitxer.");
         }
-
-        myReader.close();
-
-
-        if (txt_tres_en_ratlla.delete()) {
-            System.out.println("Arxiu: '" + txt_tres_en_ratlla.getName() + "' eliminat.");
-        }
-        else {
-            System.out.println("El arxiu: '" + txt_tres_en_ratlla.getName() + "' no s'ha pogut eliminar.");
-        }
-
     }
 
 }
